@@ -7,10 +7,14 @@ Route::get('/', function () {
 });
 
 route::get('/home', function(){
-    return view('home');
-});
+    return view('home', ['name'=>"team"]);
+})->name('home');
 
-route::get('/home2/{name}', function($name){
+route::get('/about', function(){
+    return view('about', ['name'=>"team"]);
+})->name('about');
+
+route::get('/home/{name}', function($name){
     return view('home',['name'=>$name]);
 });
 
