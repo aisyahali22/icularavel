@@ -60,3 +60,8 @@ route::name('job')->prefix('job')->group(function(){
         return 'Job details are following';
     })->name('.description');
 });
+
+// route::get('/feeds', function(){
+//     return view('pages/feed/index');
+//   })->name('feeds');
+require __DIR__.'/feed/web.php';
