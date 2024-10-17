@@ -1,0 +1,15 @@
+
+POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=GEMINI_API_KEY HTTP/1.1
+content-type: application/json
+
+{
+  "contents":[
+    {
+      "parts":[
+        {
+          "text":"siapakah perdana menteri malaysia 2023"
+        }
+      ]
+    }
+  ]
+}
