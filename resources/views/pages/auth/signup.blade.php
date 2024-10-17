@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'Sign In')
+@section('title', 'Sign Up')
 
 @section('content')
 
@@ -15,10 +15,14 @@
                 </ul>
             </div>
         @endif
-
-    <form action="{{ route('auth.authenticate')}}" method="POST">
-        @csrf
         
+    <form action="{{ route('auth.store')}}" method="POST">
+        @csrf
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name">
+             </div>
+
     <div class="mb-3">
       <label for="exampleInputPassword1" class="form-label">Email address</label>
       <input type="email" class="form-control" id="email" name="email">
@@ -26,11 +30,11 @@
     </div>
     <div class="mb-3>
 
-      <label for="password" class="form-label">Password</label>
+        <label for="password" class="form-label">Password</label>
         <input type="password" class="form-control" id="password" name="password">
     </div>
     
-    <button type="submit" class="btn btn-primary">Login</button>
+    <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 
 </div>
